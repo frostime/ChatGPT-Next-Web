@@ -670,6 +670,7 @@ function _Chat() {
   const session = chatStore.currentSession();
   const config = useAppConfig();
   const fontSize = config.fontSize;
+  const fontFamily = config.fontFamily;
 
   const [showExport, setShowExport] = useState(false);
 
@@ -1420,6 +1421,7 @@ function _Chat() {
                         setUserInput(getMessageTextContent(message));
                       }}
                       fontSize={fontSize}
+                      fontFamily={fontFamily}
                       parentRef={scrollRef}
                       defaultShow={i >= messages.length - 6}
                     />
@@ -1514,6 +1516,7 @@ function _Chat() {
             autoFocus={autoFocus}
             style={{
               fontSize: config.fontSize,
+              fontFamily: config.fontFamily,
             }}
           />
           {attachImages.length != 0 && (

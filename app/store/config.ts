@@ -32,6 +32,7 @@ export const DEFAULT_CONFIG = {
   submitKey: SubmitKey.Enter,
   avatar: "1f603",
   fontSize: 14,
+  fontFamily: `"HarmonyOS Sans SC", "Noto Sans", "PingFang SC", "Microsoft YaHei", sans-serif`,
   theme: Theme.Auto as Theme,
   tightBorder: !!config?.isApp,
   sendPreviewBubble: true,
