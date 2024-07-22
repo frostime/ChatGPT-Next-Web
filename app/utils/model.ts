@@ -53,15 +53,6 @@ export function collectModelTable(
     }
   > = {};
 
-  // default models
-  models.forEach((m) => {
-    // using <modelName>@<providerId> as fullName
-    modelTable[`${m.name}@${m?.provider?.id}`] = {
-      ...m,
-      displayName: m.name, // 'provider' is copied over if it exists
-    };
-  });
-
   // server custom models
   customModels
     .split(",")
@@ -120,6 +111,15 @@ export function collectModelTable(
         }
       }
     });
+
+  // default models
+  models.forEach((m) => {
+    // using <modelName>@<providerId> as fullName
+    modelTable[`${m.name}@${m?.provider?.id}`] = {
+      ...m,
+      displayName: m.name, // 'provider' is copied over if it exists
+    };
+  });
 
   return modelTable;
 }
