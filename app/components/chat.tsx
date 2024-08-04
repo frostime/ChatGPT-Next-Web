@@ -686,6 +686,18 @@ export function ChatActions(props: {
           }}
         />
       )}
+
+      <div
+        style={{
+          display: "flex",
+          alignItems: "top",
+          flex: 1,
+          fontSize: "0.7rem",
+        }}
+      >
+        <div style={{ flex: 1 }}></div>
+        <span style={{ opacity: 0.8 }}>{currentModelName}</span>
+      </div>
     </div>
   );
 }
