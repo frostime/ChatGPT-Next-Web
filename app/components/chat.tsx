@@ -781,16 +781,30 @@ export function ChatActions(props: {
         />
       )}
 
+      {/* If you want to add any successive actions, please place them above */}
       <div
         style={{
           display: "flex",
           alignItems: "top",
           flex: 1,
           fontSize: "0.7rem",
+          justifyContent: "flex-end",
+          overflow: "hidden",
+          whiteSpace: "nowrap",
         }}
       >
-        <div style={{ flex: 1 }}></div>
-        <span style={{ opacity: 0.8 }}>{currentModelName}</span>
+        <span
+          style={{
+            opacity: 0.8,
+            overflow: "hidden",
+            textOverflow: "ellipsis",
+            whiteSpace: "nowrap",
+            minWidth: 0,
+            maxWidth: "175px",
+          }}
+        >
+          {currentModelName}
+        </span>
       </div>
     </div>
   );
